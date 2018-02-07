@@ -118,6 +118,9 @@ TARGET_NO_RECOVERY := true
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
 
+# Power
+TARGET_USES_INTERACTION_BOOST := true
+
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
