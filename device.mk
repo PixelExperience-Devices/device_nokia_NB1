@@ -276,6 +276,12 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
+# VR
+PRODUCT_PACKAGES += \
+    vr.msm8998 \
+    android.hardware.vr@1.0-impl \
+    android.hardware.vr@1.0-service
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
