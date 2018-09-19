@@ -125,6 +125,9 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
+# Radio
+TARGET_USES_OLD_MNC_FORMAT := true
+
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist
