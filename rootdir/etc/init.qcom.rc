@@ -208,7 +208,6 @@ on boot
 
     # Create directory used for display
     # for backward compatibility
-    mkdir /persist/display 0770 system graphics
     mkdir /mnt/vendor/persist/display 0770 system graphics
 
     # Create vpp directory
