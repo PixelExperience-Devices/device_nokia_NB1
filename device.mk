@@ -106,10 +106,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
-# Configstore
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service
-
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8998 \
