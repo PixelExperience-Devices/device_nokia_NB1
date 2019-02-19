@@ -137,6 +137,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
 BOARD_VNDK_VERSION := current
