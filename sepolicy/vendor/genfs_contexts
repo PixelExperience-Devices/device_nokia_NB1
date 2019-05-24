@@ -6,6 +6,7 @@ genfscon proc /AllHWList/tp_double_tap   u:object_r:proc_fih:s0
 
 # Sensors
 genfscon proc /sensordata       u:object_r:proc_fih:s0
+genfscon proc /baseband         u:object_r:proc_fih:s0
 
 # Sysfs
 genfscon sysfs /sys/devices/soc/soc:qcom,ipa_fws@1e08000/subsys0/name                                                                       u:object_r:sysfs_ssr:s0
