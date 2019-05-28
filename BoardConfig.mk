@@ -114,7 +114,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
