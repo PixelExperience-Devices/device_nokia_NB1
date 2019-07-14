@@ -177,6 +177,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
 
+# Permissions
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/permissions/com.evenwell.datacollect.xml:system/etc/permissions/com.evenwell.datacollect.xml \
+    $(LOCAL_PATH)/configs/permissions/com.fihtdc.datacollect.xml:system/etc/permissions/com.fihtdc.datacollect.xml \
+    $(LOCAL_PATH)/configs/permissions/com.fihtdc.hardware.sensor.hall.xml:system/etc/permissions/com.fihtdc.hardware.sensor.hall.xml \
+    $(LOCAL_PATH)/configs/permissions/com.fihtdc.inlifeui.settings.style.android.xml:system/etc/permissions/com.fihtdc.inlifeui.settings.style.android.xml
+
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
