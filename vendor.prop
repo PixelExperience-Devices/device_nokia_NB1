@@ -94,6 +94,9 @@ vendor.camera.aux.packagelist=com.evenwell.camera2,com.evenwell.fqc,com.tools.al
 vendor.camera.aux.packagelist=org.codeaurora.snapcam
 vendor.voice.path.for.pcm.voip=false
 
+# Charger
+ro.charger.enable_suspend=true
+
 # CNE
 persist.vendor.cne.feature=1
 
