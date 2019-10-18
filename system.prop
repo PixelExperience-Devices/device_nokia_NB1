@@ -41,6 +41,9 @@ ro.vendor.display.cabl=2
 sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
 
+# QC framework value-adds
+ro.vendor.qti.va_aosp.support=1
+
 # Radio
 DEVICE_PROVISIONED=1
 config.disable_networktime=false
