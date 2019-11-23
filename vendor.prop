@@ -91,6 +91,10 @@ ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=4096
 
 # IMS
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
 persist.ims.enableADBLogs=1
 persist.ims.enableDebugLogs=1
 persist.data.iwlan.enable=true
