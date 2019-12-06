@@ -16,15 +16,6 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.library_name=libbluetooth_qti.so
 
-# Dalvik
-dalvik.vm.heapsize=36m
-dalvik.vm.isa.arm.features=default
-dalvik.vm.isa.arm.variant=cortex-a73
-dalvik.vm.isa.arm64.features=default
-dalvik.vm.isa.arm64.variant=generic
-persist.sys.dalvik.vm.lib.2=libart.so
-ro.dalvik.vm.native.bridge=0
-
 # Data modules
 persist.data.netmgrd.qos.enable=true
 persist.vendor.data.mode=concurrent
