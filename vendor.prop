@@ -152,6 +152,9 @@ ro.vendor.sensors.multishake=true
 ro.vendor.sensors.pmd=true
 ro.vendor.sensors.sta_detect=true
 
+# USB
+vendor.usb.diag.func.name=diag
+
 # ZRAM
 ro.vendor.qti.config.zram=true
 ro.vendor.qti.sys.fw.bg_apps_limit=15
