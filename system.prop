@@ -21,8 +21,6 @@ persist.data.netmgrd.qos.enable=true
 persist.vendor.data.mode=concurrent
 
 # Display
-ro.sf.blurs_are_expensive=1
-ro.surface_flinger.supports_background_blur=1
 debug.gralloc.enable_fb_ubwc=1
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
@@ -30,6 +28,11 @@ debug.sf.latch_unsignaled=1
 ro.vendor.display.cabl=2
 sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
+
+# Display - Blur
+persist.sys.sf.disable_blurs=1
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
 
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
