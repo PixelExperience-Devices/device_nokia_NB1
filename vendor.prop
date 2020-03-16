@@ -154,6 +154,7 @@ ro.vendor.sensors.sta_detect=true
 
 # USB
 vendor.usb.diag.func.name=diag
+vendor.usb.use_ffs_mtp=0
 
 # ZRAM
 ro.vendor.qti.config.zram=true
