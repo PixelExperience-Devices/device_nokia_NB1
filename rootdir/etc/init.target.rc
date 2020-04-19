@@ -66,15 +66,6 @@ on post-fs
     # Wait for qseecomd started
     wait_for_prop vendor.sys.listeners.registered true
 
-on post-fs-data
-    mkdir /data/tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
-    mkdir /tombstones/lpass 0771 system system
-    mkdir /tombstones/wcnss 0771 system system
-    mkdir /tombstones/dsps 0771 system system
-    mkdir /data/vendor/hbtp 0750 system system
-    mkdir /data/misc/qvr 0770 system system
-
 on late-fs
     # Start services for bootanim
     start surfaceflinger
