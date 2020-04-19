@@ -527,7 +527,6 @@ service vendor.sensor-sh /vendor/bin/init.qcom.sensors.sh
 
 on property:vold.decrypt=trigger_restart_framework
     start vendor.qcom-c_main-sh
-    start wcnss-service
 
 service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
