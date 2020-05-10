@@ -53,10 +53,18 @@ on fs
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
 
-on post-fs
+    # Start HW service manager early
+    start hwservicemanager
+
+    # qseecomd needs /dev/block/bootdevice
+    # vold needs keymaster that needs qseecomd
     start vendor.qseecomd
-    exec - system system -- /vendor/bin/init.qti.qseecomd.sh
+
+on post-fs
     write /dev/ipa 1
+
+    # Wait for qseecomd started
+    wait_for_prop vendor.sys.listeners.registered true
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
@@ -68,6 +76,13 @@ on post-fs-data
     mkdir /data/misc/qvr 0770 system system
 
 on late-fs
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-1
+    start vendor.configstore-hal
+    start vendor.gralloc-2-0
+
     # Mount RW partitions which need to run fsck
     mount_all /vendor/etc/fstab.qcom --late
 
