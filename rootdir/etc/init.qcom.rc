@@ -469,8 +469,6 @@ on property:persist.vendor.sys.rawdump_copy=0
     write /sys/kernel/dload/emmc_dload 0
 
 on property:sys.boot_completed=1
-    write /dev/kmsg "Boot completed "
-
     # Tune FS for runtime
     write /sys/block/sda/queue/read_ahead_kb 128
     write /sys/block/sdf/queue/read_ahead_kb 128
@@ -478,6 +476,11 @@ on property:sys.boot_completed=1
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
+
+    start vendor.qcom-post-boot
+    start qti-testscripts
+
+    write /dev/kmsg "Boot completed "
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
@@ -792,10 +795,6 @@ service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
     group wifi inet
     disabled
     oneshot
-
-on property:sys.boot_completed=1
-    start vendor.qcom-post-boot
-    start qti-testscripts
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
