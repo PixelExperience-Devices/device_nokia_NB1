@@ -30,8 +30,6 @@
 #include <utils/Log.h>
 #include <utils/Trace.h>
 
-#include "disp-power/display-helper.h"
-
 namespace aidl {
 namespace google {
 namespace hardware {
@@ -89,17 +87,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     LOG(DEBUG) << "Power setMode: " << toString(type) << " to: " << enabled;
     ATRACE_INT(toString(type).c_str(), enabled);
     switch (type) {
-        case Mode::LOW_POWER:
-            if (enabled) {
-                // Device in battery saver mode, enable display low power mode
-                set_display_lpm(true);
-                mHintManager->DoHint(toString(type));
-            } else {
-                // Device exiting battery saver mode, disable display low power mode
-                set_display_lpm(false);
-                mHintManager->EndHint(toString(type));
-            }
-            break;
         case Mode::SUSTAINED_PERFORMANCE:
             if (enabled && !mSustainedPerfModeOn) {
                 if (!mVRModeOn) {  // Sustained mode only.
@@ -177,10 +164,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
 
 ndk::ScopedAStatus Power::isModeSupported(Mode type, bool *_aidl_return) {
     bool supported = mHintManager->IsHintSupported(toString(type));
-    // LOW_POWER handled insides PowerHAL specifically
-    if (type == Mode::LOW_POWER) {
-        supported = true;
-    }
     LOG(INFO) << "Power mode " << toString(type) << " isModeSupported: " << supported;
     *_aidl_return = supported;
     return ndk::ScopedAStatus::ok();
