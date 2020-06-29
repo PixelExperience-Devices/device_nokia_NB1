@@ -1897,7 +1897,6 @@ vendor/bin/gx_fpcmd
 vendor/bin/gx_fpd
 vendor/bin/hal_proxy_daemon
 vendor/bin/hbtp_daemon
-vendor/bin/hw/rild
 vendor/bin/hw/vendor.fih.hardware.box@1.0-service
 vendor/bin/hw/vendor.fih.hardware.iface@1.0-service
 vendor/bin/icm
