@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/nokia/NB1
-BOARD_VENDOR := nokia
 
 # Architecture
 TARGET_ARCH := arm64
