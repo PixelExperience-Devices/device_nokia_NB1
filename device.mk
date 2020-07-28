@@ -90,6 +90,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0 \
+    android.hardware.camera.device@3.4 \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider@2.5
+
 # Exclude sensor from InputManager
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/excluded-input-devices.xml \
