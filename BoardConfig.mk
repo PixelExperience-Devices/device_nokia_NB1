@@ -74,6 +74,7 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
