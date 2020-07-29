@@ -107,7 +107,8 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 BOARD_USES_QCOM_HARDWARE := true
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/persist:/persist
 
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
