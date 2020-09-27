@@ -1,0 +1,2 @@
+# Firmware
+/persist(/.*)?                                  u:object_r:mnt_vendor_file:s0
