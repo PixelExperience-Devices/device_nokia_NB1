@@ -150,9 +150,6 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml
 
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0-impl \
