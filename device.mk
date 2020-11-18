@@ -102,7 +102,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    GCamGOPrebuilt
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
