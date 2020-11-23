@@ -116,7 +116,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8998 \
     memtrack.msm8998 \
     libdisplayconfig \
-    liboverlay \
     libtinyxml \
     libqdMetaData \
     libqdMetaData.system
