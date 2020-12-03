@@ -400,7 +400,9 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/google/pixel \
+    hardware/google/interfaces
 
 # Update engine
 PRODUCT_PACKAGES += \
