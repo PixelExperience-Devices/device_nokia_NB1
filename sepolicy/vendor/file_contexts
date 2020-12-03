@@ -7,3 +7,7 @@
 /dev/goodix_fp		                u:object_r:gx_fpd_device:s0
 /data/system/fingerprint(/.*)?      u:object_r:gx_fpd_data_file:s0
 /vendor/bin/gx_fpd                  u:object_r:gx_fpd_exec:s0
+
+# Power HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.msm8998-libperfmgr      u:object_r:hal_power_default_exec:s0
+
