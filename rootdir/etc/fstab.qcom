@@ -19,3 +19,6 @@
 
 #usb otg auto mount, 80-NF283-1_D, page 200, mount point: /mnt/media_rw/
 /devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.*.auto*     auto    auto    nosuid,nodev    wait,voldmanaged=usbotg:auto
+
+# ZRAM
+/dev/block/zram0                         none        swap   defaults    zramsize=2147483648
