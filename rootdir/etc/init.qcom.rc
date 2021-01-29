@@ -799,7 +799,7 @@ service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
     user root
     oneshot
 
-service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
+service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
     group root system wakelock graphics
@@ -820,7 +820,7 @@ service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
     oneshot
 
 on property:sys.boot_completed=1
-    start qcom-post-boot
+    start vendor.qcom-post-boot
     start qti-testscripts
 
 on property:ro.vendor.ril.mbn_copy_completed=1
@@ -1009,7 +1009,7 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
 
 on charger
     setprop persist.sys.usb.config mass_storage
-    start qcom-post-boot
+    start vendor.qcom-post-boot
 
 #add poweroffhandler
 service poweroffhandler /system/vendor/bin/poweroffhandler
