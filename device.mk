@@ -474,6 +474,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwifi-hal-qcom \
     TetheringConfigOverlay \
+    netutils-wrapper-1.0 \
     wcnss_service \
     WifiOverlay \
     wpa_supplicant \
