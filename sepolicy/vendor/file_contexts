@@ -1,4 +1,9 @@
 # Firmware
-/bt_firmware(/.*)?                              u:object_r:bt_firmware_file:s0
-/firmware(/.*)?                                 u:object_r:firmware_file:s0
-/persist(/.*)?                                  u:object_r:mnt_vendor_file:s0
+/bt_firmware(/.*)?                  u:object_r:bt_firmware_file:s0
+/firmware(/.*)?                     u:object_r:firmware_file:s0
+/persist(/.*)?                      u:object_r:mnt_vendor_file:s0
+
+# Goodix Fingerprint
+/dev/goodix_fp		                u:object_r:gx_fpd_device:s0
+/data/system/fingerprint(/.*)?      u:object_r:gx_fpd_data_file:s0
+/vendor/bin/gx_fpd                  u:object_r:gx_fpd_exec:s0
