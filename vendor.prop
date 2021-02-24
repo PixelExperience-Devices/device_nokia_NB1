@@ -97,7 +97,6 @@ persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 persist.ims.enableADBLogs=1
 persist.ims.enableDebugLogs=1
-persist.data.iwlan.enable=true
 
 # Media
 media.aac_51_output_enabled=true
