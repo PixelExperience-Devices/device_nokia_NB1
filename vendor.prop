@@ -183,6 +183,10 @@ ro.vendor.sensors.multishake=true
 ro.vendor.sensors.pmd=true
 ro.vendor.sensors.sta_detect=true
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8998
+
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
