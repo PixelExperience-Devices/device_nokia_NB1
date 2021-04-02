@@ -112,9 +112,6 @@ TARGET_NO_RECOVERY := true
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
 
-# Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/AllHWList/tp_double_tap"
-
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
