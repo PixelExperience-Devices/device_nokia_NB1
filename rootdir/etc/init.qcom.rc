@@ -473,6 +473,9 @@ on property:sys.boot_completed=1
     start vendor.qcom-post-boot
     start qti-testscripts
 
+    # Start perf
+    setprop vendor.post_boot.parsed 1
+
     write /dev/kmsg "Boot completed "
 
 on property:persist.vendor.radio.atfwd.start=false
