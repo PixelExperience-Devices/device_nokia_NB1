@@ -677,8 +677,8 @@ lib/vendor.qti.hardware.fingerprint@1.0.so:vendor/lib/vendor.qti.hardware.finger
 -vendor/app/QFingerprintService/QFingerprintService.apk
 vendor/bin/gx_fpd
 vendor/bin/qfp-daemon
-vendor/lib64/libfp_client.so
-vendor/lib64/libfpservice.so
+vendor/lib64/libfp_client.so|a132bbbde9ef7aac598fd314c087272dd474ded1
+vendor/lib64/libfpservice.so|29fd00a0bbd06c3cd608133b04205625b571d824
 vendor/lib64/libfpjni.so
 vendor/lib64/libqfp-service.so
 vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8998.so
