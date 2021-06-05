@@ -38,3 +38,13 @@ cc_library_shared {
         "libgui_vendor"
     ]
 }
+
+// DPM
+cc_library {
+    name: "libshim_cutils",
+    srcs: [
+        "strdup16to8.cpp",
+        "strdup8to16.cpp",
+    ],
+    shared_libs: ["libcutils"],
+}

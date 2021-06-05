@@ -66,6 +66,10 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_gui.so" "${2}"
             ;;
+        # Shim libdpmframework
+        product/lib64/libdpmframework.so)
+            "${PATCHELF}" --add-needed "libshim_cutils.so" "${2}"
+            ;;
     esac
 }
 

@@ -390,7 +390,8 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libshim_binder \
-    libshim_gui
+    libshim_gui \
+    libshim_cutils
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
