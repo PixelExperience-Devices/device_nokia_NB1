@@ -529,25 +529,25 @@ on property:vendor.bluetooth.startbtlogger=false
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
-service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
+service vendor.qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
     class core
     user root
     oneshot
 
-service qcom-c_main-sh /vendor/bin/init.class_main.sh
+service vendor.qcom-c_main-sh /vendor/bin/init.class_main.sh
     class main
     user root
     group root system
     oneshot
 
 on property:vold.decrypt=trigger_restart_framework
-    start qcom-c_main-sh
+    start vendor.qcom-c_main-sh
     start wcnss-service
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
+service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
@@ -760,30 +760,30 @@ service ssgtzd /vendor/bin/ssgtzd
     group system
     socket ssgtzd stream 0660 system inet
 
-service mlid /vendor/bin/mlid
+service vendor.mlid /vendor/bin/mlid
     class late_start
     user gps
     group gps
     socket mlid stream 0666 gps gps
 
-service loc_launcher /system/vendor/bin/loc_launcher
+service vendor.loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
 
-service drmdiag /system/vendor/bin/drmdiagapp
+service vendor.drmdiag /system/vendor/bin/drmdiagapp
     class late_start
      user root
      disabled
      oneshot
 
 on property:drmdiag.load=1
-    start drmdiag
+    start vendor.drmdiag
 
 on property:drmdiag.load=0
-    stop drmdiag
+    stop vendor.drmdiag
 
-service qcom-sh /vendor/bin/init.qcom.sh
+service vendor.qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
     group root system radio oem_2903 oem_2904 vendor_rfs
