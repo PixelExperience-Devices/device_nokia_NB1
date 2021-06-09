@@ -52,6 +52,15 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        ## NB1 Patches
+        vendor/lib/hw/audio.primary.msm8998.so|vendor/lib64/hw/audio.primary.msm8998.so)
+            "${PATCHELF}" --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper for common device
 setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
