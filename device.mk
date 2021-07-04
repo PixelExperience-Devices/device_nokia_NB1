@@ -488,8 +488,5 @@ PRODUCT_PACKAGES += \
     libnl \
     libstagefright_enc_common
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 # Inherit vendor
 $(call inherit-product, vendor/nokia/NB1/NB1-vendor.mk)
