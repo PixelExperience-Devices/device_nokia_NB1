@@ -12,14 +12,14 @@ vendor/lib64/libaudio_log_utils.so
 
 # Audio (ACDB)
 vendor/etc/acdbdata/adsp_avs_config.acdb
-vendor/etc/acdbdata/NB1/Bluetooth_cal.acdb
-vendor/etc/acdbdata/NB1/General_cal.acdb
-vendor/etc/acdbdata/NB1/Global_cal.acdb
-vendor/etc/acdbdata/NB1/Handset_cal.acdb
-vendor/etc/acdbdata/NB1/Hdmi_cal.acdb
-vendor/etc/acdbdata/NB1/Headset_cal.acdb
-vendor/etc/acdbdata/NB1/Speaker_cal.acdb
-vendor/etc/acdbdata/NB1/workspaceFile.qwsp
+vendor/etc/acdbdata/NB1/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+vendor/etc/acdbdata/NB1/General_cal.acdb:vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
+vendor/etc/acdbdata/NB1/Global_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
+vendor/etc/acdbdata/NB1/Handset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
+vendor/etc/acdbdata/NB1/Hdmi_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
+vendor/etc/acdbdata/NB1/Headset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
+vendor/etc/acdbdata/NB1/Speaker_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+vendor/etc/acdbdata/NB1/workspaceFile.qwsp:vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
 
 # Camera HAL
 lib/sensors.rangefinder.so:vendor/lib/sensors.rangefinder.so
