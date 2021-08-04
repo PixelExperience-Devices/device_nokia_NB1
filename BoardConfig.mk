@@ -85,6 +85,9 @@ TARGET_NO_RECOVERY := true
 TARGET_BOARD_PLATFORM := msm8998
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno540
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
