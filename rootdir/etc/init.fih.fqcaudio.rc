@@ -1,9 +1,10 @@
 
 
-service fqcaudioloopback /system/vendor/bin/sh  /system/vendor/etc/init/hw/fqcaudioloopback_run.sh
-	user system
+service fqcaudioloopback /system/vendor/bin/sh /system/vendor/etc/init/hw/fqcaudioloopback_run.sh
+    user system
     disabled
     oneshot
+
 on property:vendor.sys.fqcaudio=11
     restart fqcaudioloopback
 on property:vendor.sys.fqcaudio=10

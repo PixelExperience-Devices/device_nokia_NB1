@@ -16,10 +16,83 @@ import /vendor/etc/init/hw/init.fih.elabel.rc
 import /vendor/etc/init/hw/init.nb1.dbg.rc
 
 on init
-    setprop persist.vendor.fih.dbg.dev.info 2
+    setprop persist.fp.navigation 1
+    setprop persist.close.keymaster 1
 
 on early-boot
     rm /persist/bluetooth/.bt_nv.bin
+
+on boot
+    # Set fingerprint device permissions
+    chown system system /dev/goodix_fp
+    chmod 0644 /dev/goodix_fp
+
+    # Set panel permissions
+	chown system system /proc/AllHWList/LCM0
+	chown system system /proc/AllHWList/LCM0/AOD
+	chown system system /proc/AllHWList/LCM0/PanelID
+	chown system system /proc/AllHWList/LCM0/setlp
+	chown system system /sys/class/graphics/fb0/blank
+	chown system system /proc/AllHWList/LCM0/glance
+	chown system system /proc/AllHWList/LCM0/awer_cnt
+	chown system system /proc/AllHWList/LCM0/awer_status	
+
+    chmod 777 /proc/AllHWList/LCM0
+	chmod 664 /proc/AllHWList/LCM0/AOD
+	chmod 644 /proc/AllHWList/LCM0/PanelID
+	chmod 664 /proc/AllHWList/LCM0/setlp
+	chmod 664 /proc/AllHWList/LCM0/glance
+	chmod 664 /proc/AllHWList/LCM0/awer_cnt
+	chmod 664 /proc/AllHWList/LCM0/awer_status
+
+    # Set touch permissions
+    chown system system /proc/AllHWList/tp_self_test
+    chown system system /proc/AllHWList/tp_self_test_U0
+    chown system system /proc/AllHWList/tp_upgrade
+    chown system system /proc/AllHWList/tp_alt_rst
+    chown system system /proc/AllHWList/tp_alt_st_count
+    chown system system /proc/AllHWList/tp_alt_st_enable
+    chown system system /proc/AllHWList/tp_double_tap
+    chown system system /proc/AllHWList/tp_prox_status
+    chown system system /sys/devices/virtual/input/siw_touch_input/lpwg_notify
+    chown system system /sys/devices/virtual/input/siw_touch_input/glove_status
+    chmod 644 /proc/AllHWList/tp_self_test 
+    chmod 644 /proc/AllHWList/tp_self_test_U0 
+    chmod 444 /proc/AllHWList/tp_fw_ver 
+    chmod 644 /proc/AllHWList/tp_upgrade
+    chmod 644 /proc/AllHWList/tp_alt_rst
+    chmod 644 /proc/AllHWList/tp_alt_st_count
+    chmod 644 /proc/AllHWList/tp_alt_st_enable
+    chmod 644 /proc/AllHWList/tp_double_tap
+    chmod 644 /proc/AllHWList/tp_prox_status
+
+    # Set charging permissions
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0664 /sys/class/power_supply/battery/input_suspend
+    restorecon /sys/class/power_supply/battery/input_suspend
+
+    # Disable thermal balance and CTM (Connect Temperature Monitor)
+    setprop persist.therm_bal.disallowed 1
+    setprop persist.ctm.disallowed 1
+
+on fs
+	mount ext4 /dev/block/bootdevice/by-name/elabel /elabel nosuid nodev noatime barrier=1
+	chown system system /elabel
+    restorecon_recursive /elabel
+
+on post-fs-data
+    mkdir /data/vendor/misc/touch 0770 system system
+    mkdir /data/system/fingerprint 0770 system system
+
+service vendor.gx_fpd /vendor/bin/gx_fpd
+    class main
+    user system
+    group system
+
+service amp-init-sh /vendor/bin/init.nb1.smartamp_init.sh
+    class late_start
+    user system
+    oneshot
 
 service wifisar /system/vendor/bin/sh /system/vendor/bin/wifisar.sh
     user root
@@ -29,14 +102,11 @@ service wifisar /system/vendor/bin/sh /system/vendor/bin/wifisar.sh
 on property:sys.wifi.sar=1
     start wifisar
 
-service dhcpcd_eth0 /system/bin/dhcpcd -ABDKL 
-class main 
-disabled 
-oneshot
-
 on property:sys.boot_completed=1
-    #Set fqc xml path for fqc test
-    setprop fqc.xmlpath /system/etc/fqc_NB1_${ro.boot.simslot}.xml
+    restorecon_recursive /data/system/fingerprint/
+
+on property:vold.sd=1
+    write /sys/devices/virtual/bdi/179:0/read_ahead_kb 1024
 
 on property:vendor.wifi.mtu=true
    write /sys/class/net/wlan0/mtu 1440

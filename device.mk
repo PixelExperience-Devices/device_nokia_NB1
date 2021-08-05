@@ -310,51 +310,26 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.class_main.sh \
-    init.crda.sh \
-    init.mdm.sh \
-    init.nb1.lcm.sh \
     init.nb1.smartamp_init.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
-    init.qcom.crashdata.sh \
     init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
     init.qcom.post_boot.sh \
-    init.qcom.pre-cda.sh \
-    init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.syspart_fixup.sh \
     init.qcom.usb.sh \
     init.qcom.wifi.sh \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qti.qseecomd.sh \
-    qca6234-service.sh \
     wifisar.sh \
     fqcaudioloopback_run.sh \
-    init.fih.elabel.rc \
     init.fih.fqcaudio.rc \
     init.msm.usb.configfs.rc \
-    init.nb1.battery.rc \
     init.nb1.camera.rc \
-    init.nb1.dbg.rc \
-    init.nb1.fingerprint.rc \
-    init.nb1.lcm.rc \
-    init.nb1.led.rc \
     init.nb1.poweroff_charging.rc \
-    init.nb1.sd.rc \
-    init.nb1.smartamp.rc \
     init.nb1.target.rc \
-    init.nb1.touch.rc \
-    init.nb1.wbg.rc \
-    init.qcom.cda.rc \
-    init.qcom.diagtest.rc \
-    init.qcom.factory.rc \
-    init.qcom.fs.rc \
-    init.qcom.ramdump.rc \
     init.qcom.rc \
-    init.qcom.target.rc \
     init.qcom.usb.rc \
     init.target.rc \
     fstab.qcom \

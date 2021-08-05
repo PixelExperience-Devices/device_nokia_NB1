@@ -35,6 +35,7 @@ vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 camera.disable_zsl_mode=1
+camera.mono_only=1
 persist.camera.debug_img_exif=1
 persist.dual.disable_all=0
 persist.ts.rtmakeup=false
@@ -66,7 +67,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Fingerprint
 qemu.hw.mainkeys=1
-ro.boot.gxfp_lv=true
 sys.gxfp.lv=1
 
 # FM

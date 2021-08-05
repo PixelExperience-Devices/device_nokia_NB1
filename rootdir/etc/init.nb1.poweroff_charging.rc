@@ -1,16 +1,32 @@
-# when receieve charger tag, it needs to execute "power off charging" program
+# Copyright (c) 2009-2012, 2014-2021, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above copyright
+#       notice, this list of conditions and the following disclaimer in the
+#       documentation and/or other materials provided with the distribution.
+#     * Neither the name of The Linux Foundation nor
+#       the names of its contributors may be used to endorse or promote
+#       products derived from this software without specific prior written
+#       permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NON-INFRINGEMENT ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
+# Offline charging
 on charger
-    # FihtdcCode@20131224 YiYu Modify for One Image mechanism START
-    #mkdir /hidden 0770 system system
-    #chown system hidden /hidden
-    #chmod 0551 /hidden
-    #mkdir /hidden/data 0770 system system
-    #wait /dev/block/platform/msm_sdcc.1/by-name/cda
-    #mount ext4 /dev/block/platform/msm_sdcc.1/by-name/cda /hidden/data nosuid nodev barrier=1
-
-    #trigger early-fs
-    #trigger fs
-
     wait /dev/block/bootdevice/by-name/system
     mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
 
@@ -56,23 +72,11 @@ on charger
     symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/f1
     write /config/usb_gadget/g1/UDC a800000.dwc3
 
-# FIHTDC, Enable ramdump mode
-    #write /sys/module/msm_poweroff/parameters/download_mode 1
+    # FIHTDC, avoid enter pc for workaround A1NO-6075
+    write /sys/module/lpm_levels/system/system-pc/idle_enabled N
+    write /sys/module/lpm_levels/system/system-pc/suspend_enabled N
 
-# FIHTDC, Diable thermal balance and CTM(Connect Temperature Monitor)
-    setprop persist.therm_bal.disallowed 1
-    setprop persist.ctm.disallowed 1
-
-# This is could be used for debug by instead of above settings.
-    #mkdir /system 0777 system system
-    #wait /dev/block/platform/msm_sdcc.1/by-name/system
-    #mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system nosuid nodev barrier=1
-    #write /sys/class/android_usb/android0/idProduct C001
-    #write /sys/class/android_usb/android0/functions mass_storage,adb
-    #write /sys/class/android_usb/android0/enable 1
-    #start adbd
-
-# power consumption
+    # Power consumption
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
@@ -81,16 +85,3 @@ on charger
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu6/online 0
     write /sys/devices/system/cpu/cpu7/online 0
-
-
-# start program
-#    write /sys/power/wake_lock power_off_charging
-#    write /sys/power/wake_unlock power_off_charging
-
-#    write /sys/class/leds/lcd-backlight/brightness 67
-#    write /sys/class/leds/red/brightness 0
-#    write /sys/class/leds/green/brightness 0
-#    write /sys/class/leds/blue/brightness 0
-
-# start fih_charger
-#    service fih_charger /system/bin/battery_charger
