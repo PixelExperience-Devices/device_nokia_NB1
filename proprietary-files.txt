@@ -542,7 +542,6 @@ vendor/lib64/libdpmqmihal.so
 vendor/bin/qseecomd
 vendor/lib/libbase64.so
 vendor/lib/libcpion.so
-vendor/lib/libcppf.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libGPQTEEC_vendor.so
@@ -566,7 +565,6 @@ vendor/lib/libtzdrmgenprov.so
 vendor/lib/libtzplayready.so
 vendor/lib64/libbase64.so
 vendor/lib64/libcpion.so
-vendor/lib64/libcppf.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPQTEEC_vendor.so
@@ -601,17 +599,18 @@ vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libmm-hdcpmgr.so
 
-# DRM-Hardware
-vendor/bin/hw/android.hardware.drm@1.0-service
-vendor/bin/hw/android.hardware.drm@1.1-service.clearkey
+# DRM (Widevine)
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.0-service.rc
-vendor/etc/init/android.hardware.drm@1.1-service.clearkey.rc
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib/hw/android.hardware.drm@1.0-impl.so
-vendor/lib64/hw/android.hardware.drm@1.0-impl.so
+vendor/lib/mediadrm/libdrmclearkeyplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libcppf.so
+vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libdrmclearkeyplugin.so
+vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/lib64/libcppf.so
 
-# DRM-Qteeconnector
+# DRM (Qteeconnector)
 lib/vendor.qti.hardware.qteeconnector@1.0.so:vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so
 lib64/vendor.qti.hardware.qteeconnector@1.0.so:vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
@@ -621,30 +620,25 @@ vendor/lib/libQTEEConnector_vendor.so
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/libQTEEConnector_vendor.so
 
-# DRM-Widevine
-etc/firmware/cppf.b00
-etc/firmware/cppf.b01
-etc/firmware/cppf.b02
-etc/firmware/cppf.b03
-etc/firmware/cppf.b04
-etc/firmware/cppf.b05
-etc/firmware/cppf.b06
-etc/firmware/cppf.b07
-etc/firmware/cppf.mdt
-etc/firmware/widevine.b00
-etc/firmware/widevine.b01
-etc/firmware/widevine.b02
-etc/firmware/widevine.b03
-etc/firmware/widevine.b04
-etc/firmware/widevine.b05
-etc/firmware/widevine.b06
-etc/firmware/widevine.b07
-etc/firmware/widevine.mdt
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib64/libwvhidl.so
-vendor/lib64/mediadrm/libdrmclearkeyplugin.so
-vendor/lib64/mediadrm/libwvdrmengine.so
+# DRM (Widevine/Firmware)
+etc/firmware/cppf.b00:vendor/etc/firmware/cppf.b00
+etc/firmware/cppf.b01:vendor/etc/firmware/cppf.b01
+etc/firmware/cppf.b02:vendor/etc/firmware/cppf.b02
+etc/firmware/cppf.b03:vendor/etc/firmware/cppf.b03
+etc/firmware/cppf.b04:vendor/etc/firmware/cppf.b04
+etc/firmware/cppf.b05:vendor/etc/firmware/cppf.b05
+etc/firmware/cppf.b06:vendor/etc/firmware/cppf.b06
+etc/firmware/cppf.b07:vendor/etc/firmware/cppf.b07
+etc/firmware/cppf.mdt:vendor/etc/firmware/cppf.mdt
+etc/firmware/widevine.b00:vendor/etc/firmware/widevine.b00
+etc/firmware/widevine.b01:vendor/etc/firmware/widevine.b01
+etc/firmware/widevine.b02:vendor/etc/firmware/widevine.b02
+etc/firmware/widevine.b03:vendor/etc/firmware/widevine.b03
+etc/firmware/widevine.b04:vendor/etc/firmware/widevine.b04
+etc/firmware/widevine.b05:vendor/etc/firmware/widevine.b05
+etc/firmware/widevine.b06:vendor/etc/firmware/widevine.b06
+etc/firmware/widevine.b07:vendor/etc/firmware/widevine.b07
+etc/firmware/widevine.mdt:vendor/etc/firmware/widevine.mdt
 
 # Display-Hardware
 lib/libsdm-disp-apis.so
