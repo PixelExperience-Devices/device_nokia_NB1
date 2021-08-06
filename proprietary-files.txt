@@ -931,14 +931,6 @@ vendor/lib64/libkeystore-engine-wifi-hidl.so
 vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/libspcom.so
 
-# Lights
-vendor/bin/hw/android.hardware.light@2.0-service
-vendor/etc/init/android.hardware.light@2.0-service.rc
-vendor/lib/hw/android.hardware.light@2.0-impl.so
-vendor/lib/hw/lights.msm8998.so
-vendor/lib64/hw/android.hardware.light@2.0-impl.so
-vendor/lib64/hw/lights.msm8998.so
-
 # Listen
 vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so
 vendor/lib/hw/sound_trigger.primary.msm8998.so
