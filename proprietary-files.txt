@@ -1356,20 +1356,12 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 
 # Thermal
-vendor/bin/hw/android.hardware.thermal@1.0-service
 vendor/bin/thermal-engine
-vendor/etc/init/android.hardware.thermal@1.0-service.rc
 vendor/etc/thermal-engine-cobalt.conf
 vendor/etc/thermal-engine.conf
-vendor/lib/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib/libthermalclient.so
-vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
-
-# Thermal-Hardware
-vendor/lib/hw/thermal.msm8998.so
-vendor/lib64/hw/thermal.msm8998.so
 
 # Time
 -vendor/app/TimeService/TimeService.apk
