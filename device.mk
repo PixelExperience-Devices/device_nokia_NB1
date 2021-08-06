@@ -165,6 +165,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     $(LOCAL_PATH)/configs/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml
+
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    libipanat \
+    liboffloadhal
+
 # IRQ
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
@@ -292,7 +304,8 @@ PRODUCT_COPY_FILES += \
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0 \
-    android.hardware.radio.config@1.0
+    android.hardware.radio.config@1.0 \
+    librmnetctl
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -356,6 +369,10 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Telephony
 PRODUCT_PACKAGES += \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -374,6 +391,12 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
+
+# VNDK
+# Update this list with what each blob is actually for
+# libstdc++: gx_fpd
+PRODUCT_PACKAGES += \
+    libstdc++.vendor
 
 # VR
 PRODUCT_PACKAGES += \
