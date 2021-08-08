@@ -116,13 +116,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.frameworks.displayservice@1.0
+    android.frameworks.displayservice@1.0 \
+    vendor.display.config@1.9.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.1-service.clearkey
+    android.hardware.drm@1.2-service.clearkey
 
 # Exclude sensor from InputManager
 PRODUCT_COPY_FILES += \
@@ -143,15 +144,10 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml
 
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
-
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl \
-    android.hardware.health@1.0-service
+    android.hardware.health@2.0-impl \
+    android.hardware.health@2.0-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -204,20 +200,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/goodix_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_fp.kl \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service \
     lights.msm8998
-
-# Low power Whitelist
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
 
 # Media
 PRODUCT_PACKAGES += \
@@ -316,7 +303,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@1.0.vendor
+    vendor.qti.hardware.perf@2.0.vendor
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -333,12 +320,14 @@ PRODUCT_COPY_FILES += \
 
 # QTI
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.0 \
+    android.hardware.radio@1.1 \
     android.hardware.radio.config@1.0 \
+    android.hardware.radio.deprecated@1.0 \
     rild \
     libxml2 \
     librmnetctl
@@ -377,13 +366,13 @@ PRODUCT_PACKAGES += \
 
 # Seccomp
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/seccomp/configstore@1.1.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/configstore@1.1.policy \
     $(LOCAL_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-service \
+    libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \

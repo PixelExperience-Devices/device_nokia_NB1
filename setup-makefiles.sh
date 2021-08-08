@@ -31,6 +31,7 @@ write_headers "${DEVICE}"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
+write_makefiles "${MY_DIR}/proprietary-files-nb1.txt" true
 
 # Finish
 write_footers
