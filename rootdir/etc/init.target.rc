@@ -176,11 +176,6 @@ service hbtp /system/vendor/bin/hbtp_daemon
     group system
     disabled
 
-service audiod /system/vendor/bin/audiod
-   class late_start
-   user system
-   group system
-
 service vendor.pd_mapper /vendor/bin/pd-mapper
      class core
 
