@@ -1456,8 +1456,6 @@ vendor/bin/gx_fpcmd
 vendor/bin/gx_fpd
 vendor/bin/hal_proxy_daemon
 vendor/bin/hbtp_daemon
-vendor/bin/hw/vendor.fih.hardware.box@1.0-service
-vendor/bin/hw/vendor.fih.hardware.iface@1.0-service
 vendor/bin/icm
 vendor/bin/ipacm-diag
 vendor/bin/mdm_helper
@@ -1472,8 +1470,6 @@ vendor/bin/mmid
 vendor/bin/myftm
 vendor/bin/pktlogconf
 vendor/bin/PktRspTest
-vendor/bin/qdcm_calib_data_JDI_Dual_nt36850_cmd_mode_dsi_panel_without_DSC.xml
-vendor/bin/qdcm_calib_data_LGD_Dual_DSI_cmd_mode_panel_without_DSC.xml
 vendor/bin/qdmastatsd
 vendor/bin/qjpeg-dma-test
 vendor/bin/qmi_simple_ril_test
@@ -1501,16 +1497,11 @@ vendor/cust/carrierMatrix
 vendor/cust/custVersion
 vendor/etc/ftm_test_config_msm8998-tasha-snd-card
 vendor/etc/init/csysservice_nontreble.rc
-vendor/etc/init/vendor.fih.hardware.box@1.0-service.rc
-vendor/etc/init/vendor.fih.hardware.iface@1.0-service.rc
-vendor/etc/lg4946_test_spec.txt
-vendor/etc/ozo_config.xml
 vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/lib/libcert_parse.wpa_s.so
 vendor/lib/libdiagjni.so
 vendor/lib/libfastcrc.so
 vendor/lib/libwapi_cert.so
-vendor/lib/lib_bbox_flog.so
 vendor/lib64/libcert_parse.wpa_s.so
 vendor/lib64/libdiagjni.so
 vendor/lib64/libfastcrc.so
@@ -1519,4 +1510,3 @@ vendor/lib64/libfpservice.so
 vendor/lib64/libfp_client.so
 vendor/lib64/libmdmimgload.so
 vendor/lib64/libwapi_cert.so
-vendor/lib64/lib_bbox_flog.so
