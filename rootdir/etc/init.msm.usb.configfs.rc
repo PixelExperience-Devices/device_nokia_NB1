@@ -31,7 +31,6 @@
 on property:sys.usb.config=mass_storage,diag,adb,serial_cdev && property:sys.usb.configfs=1
     start adbd
 
-
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mass_storage,diag,adb,serial_cdev && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "msc_diag_adb_cdev"
     rm /config/usb_gadget/g1/configs/b.1/f1
@@ -1461,9 +1460,10 @@ on property:sys.usb.config=midi,adb && property:sys.usb.configfs=1
 
 #CD-ROM
 on property:sys.boot_completed=1
-    losetup /dev/block/cdrom-loop /hidden/custom.iso
-    write /config/usb_gadget/g1/functions/mass_storage.0/lun.0/file /dev/block/cdrom-loop
-    restorecon_recursive /dev/block/cdrom-loop
+    #losetup /dev/block/cdrom-loop /hidden/custom.iso
+    #write /config/usb_gadget/g1/functions/mass_storage.0/lun.0/file /dev/block/cdrom-loop
+    #restorecon_recursive /dev/block/cdrom-loop
+    write /config/usb_gadget/g1/functions/mass_storage.0/lun.0/file /vendor/hidden/custom.iso
 
 #FIH - akckwang - NB1-782 - FIH scsi root command
 on property:service.adb.root=1

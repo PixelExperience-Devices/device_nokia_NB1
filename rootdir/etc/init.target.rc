@@ -32,7 +32,6 @@ on early-init
     mkdir /bt_firmware 0771 system system
     symlink /data/tombstones /tombstones
     mkdir /dsp 0771 media media
-
     write /proc/sys/kernel/sched_boost 1
 
 on init
@@ -57,18 +56,6 @@ on fs
 
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
-
-on late-fs
-    # boot time fs tune
-    write /sys/block/sda/queue/iostats 0
-    write /sys/block/sda/queue/scheduler cfq
-    write /sys/block/sda/queue/iosched/slice_idle 0
-    write /sys/block/sda/queue/read_ahead_kb 2048
-    write /sys/block/sda/queue/nr_requests 256
-
-on property:sys.boot_completed=1
-    # end boot time fs tune
-    write /sys/block/sda/queue/read_ahead_kb 512
 
 on post-fs
     start vendor.qseecomd
@@ -133,6 +120,7 @@ on boot
     setprop vendor.usb.rmnet.func.name "gsi"
     setprop vendor.usb.rmnet.inst.name "rmnet"
     setprop vendor.usb.dpl.inst.name "dpl"
+    setprop vendor.usb.qdss.inst.name "qdss"
     setprop sys.usb.configfs 1
 
 #Peripheral manager
@@ -230,15 +218,16 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
-service energy-awareness /system/vendor/bin/energy-awareness
-    class main
-    user root
-    group system
-    oneshot
-
+# Wireless init for wlan_mac.bin
 service wireless-init /system/vendor/bin/wireless_init -i
     class main
     user system
+    group system
+    oneshot
+
+service energy-awareness /system/vendor/bin/energy-awareness
+    class main
+    user root
     group system
     oneshot
 

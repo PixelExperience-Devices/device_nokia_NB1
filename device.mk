@@ -340,20 +340,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.nb1.smartamp_init.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
-    init.qcom.wifi.sh \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qti.qseecomd.sh \
-    wifisar.sh \
-    fqcaudioloopback_run.sh \
-    init.fih.fqcaudio.rc \
     init.msm.usb.configfs.rc \
     init.nb1.camera.rc \
     init.nb1.poweroff_charging.rc \
