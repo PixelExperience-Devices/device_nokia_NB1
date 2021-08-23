@@ -49,6 +49,7 @@ function blob_fixup() {
         ## NB1 Patches
         vendor/lib/hw/audio.primary.msm8998.so|vendor/lib64/hw/audio.primary.msm8998.so)
             "${PATCHELF}" --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"
+            "${PATCHELF}" --replace-needed "libtinycompress_vendor.so" "libtinycompress.so" "${2}"
             ;;
         # Patch gx_fpd for VNDK support
         vendor/bin/gx_fpd)
