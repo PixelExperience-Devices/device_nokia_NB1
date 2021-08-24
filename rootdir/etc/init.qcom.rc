@@ -537,6 +537,11 @@ service vendor.qcom-c_main-sh /vendor/bin/init.class_main.sh
     group root system
     oneshot
 
+service vendor.sensor-sh /vendor/bin/init.qcom.sensors.sh
+    class core
+    user root
+    oneshot
+
 on property:vold.decrypt=trigger_restart_framework
     start vendor.qcom-c_main-sh
     start wcnss-service
