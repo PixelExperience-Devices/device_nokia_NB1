@@ -71,6 +71,13 @@ function blob_fixup() {
         product/lib64/libdpmframework.so)
             "${PATCHELF}" --add-needed "libshim_cutils.so" "${2}"
             ;;
+        # Convert sdm660 to msm8998
+        vendor/lib/hw/vulkan.msm8998.so|vendor/lib64/hw/vulkan.msm8998.so)
+            "${PATCHELF}" --set-soname "vulkan.msm8998.so" "${2}"
+            ;;
+        vendor/lib/hw/sound_trigger.primary.msm8998.so|vendor/lib64/hw/sound_trigger.primary.msm8998.so)
+            "${PATCHELF}" --set-soname "sound_trigger.primary.msm8998.so" "${2}"
+            ;;
     esac
 }
 
