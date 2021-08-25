@@ -120,6 +120,7 @@ TARGET_BOARD_PLATFORM := msm8998
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
+TARGET_TAP_TO_WAKE_NODE := "/proc/AllHWList/tp_double_tap"
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
