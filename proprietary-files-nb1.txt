@@ -21,6 +21,10 @@ vendor/etc/acdbdata/NB1/Headset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Headset_cal
 vendor/etc/acdbdata/NB1/Speaker_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 vendor/etc/acdbdata/NB1/workspaceFile.qwsp:vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
 
+# Audio (Firmware)
+etc/firmware/tfa98xx.cnt:vendor/firmware/tfa98xx.cnt
+etc/firmware/tfa98xxEVT.cnt:vendor/firmware/tfa98xxEVT.cnt
+
 # Camera HAL
 lib/sensors.rangefinder.so:vendor/lib/sensors.rangefinder.so
 lib64/sensors.rangefinder.so:vendor/lib64/sensors.rangefinder.so
@@ -307,17 +311,25 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 
+# Display (Firmware)
+vendor/firmware/leia_pfp_470.fw
+vendor/firmware/leia_pm4_470.fw
+vendor/firmware/TP_Firmware_JDI
+vendor/firmware/TP_Firmware_LG4946
+
 # Fingerprint
+framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:system_ext/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
 lib64/vendor.qti.hardware.fingerprint@1.0.so:vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 lib/vendor.qti.hardware.fingerprint@1.0.so:vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 -vendor/app/QFingerprintService/QFingerprintService.apk
 vendor/bin/gx_fpd
 vendor/bin/qfp-daemon
+vendor/etc/permissions/qti_fingerprint_interface.xml:system_ext/etc/permissions/qti_fingerprint_interface.xml
 vendor/lib64/libfp_client.so|a132bbbde9ef7aac598fd314c087272dd474ded1
 vendor/lib64/libfpservice.so|29fd00a0bbd06c3cd608133b04205625b571d824
 vendor/lib64/libfpjni.so
 vendor/lib64/libqfp-service.so
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8998.so
+vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/hw/gxfingerprint.default.so
 
 # Fingerprint (Firmware)
@@ -340,9 +352,7 @@ etc/firmware/goodixfplv.b06:vendor/firmware/goodixfplv.b06
 etc/firmware/goodixfplv.b07:vendor/firmware/goodixfplv.b07
 etc/firmware/goodixfplv.mdt:vendor/firmware/goodixfplv.mdt
 
-# Firmware
-etc/firmware/tfa98xx.cnt:vendor/firmware/tfa98xx.cnt
-etc/firmware/tfa98xxEVT.cnt:vendor/firmware/tfa98xxEVT.cnt
+# Graphics (Firmware)
 vendor/firmware/a225p5_pm4.fw
 vendor/firmware/a225_pfp.fw
 vendor/firmware/a225_pm4.fw
@@ -371,14 +381,8 @@ vendor/firmware/a540_zap.b01
 vendor/firmware/a540_zap.b02
 vendor/firmware/a540_zap.elf
 vendor/firmware/a540_zap.mdt
-vendor/firmware/leia_pfp_470.fw
-vendor/firmware/leia_pm4_470.fw
-vendor/firmware/TP_Firmware_JDI
-vendor/firmware/TP_Firmware_LG4946
 
 # Sensors
-lib/vendor.qti.hardware.sensorscalibrate@1.0.so:vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-lib64/vendor.qti.hardware.sensorscalibrate@1.0.so:vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/bin/sensors.qti
 vendor/lib/hw/activity_recognition.msm8998.so
 vendor/lib/libsensor1.so

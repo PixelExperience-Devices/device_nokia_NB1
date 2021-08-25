@@ -62,6 +62,9 @@ function blob_fixup() {
         vendor/lib64/hw/gxfingerprint.default.so)
             sed -i -e 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             ;;
+        system_ext/etc/permissions/qti_fingerprint_interface.xml)
+            sed -i -e 's|/system/framework|/system/system_ext/framework|g' "${2}"
+            ;;
         # Use vendor version of libgui
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
