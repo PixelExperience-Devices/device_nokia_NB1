@@ -382,6 +382,15 @@ vendor/firmware/a540_zap.b02
 vendor/firmware/a540_zap.elf
 vendor/firmware/a540_zap.mdt
 
+# IPA
+vendor/firmware/ipa_fws.b00
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
+vendor/firmware/ipa_fws.mdt
+vendor/firmware/ipa_fws.elf
+
 # Sensors
 vendor/bin/sensors.qti
 vendor/lib/hw/activity_recognition.msm8998.so
