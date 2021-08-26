@@ -311,6 +311,17 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 
+# Camera - from Oreo
+vendor/lib/libchromaflash.so|cf85560822e04014b8950a1abae9c2843069101d
+vendor/lib/libmmcamera_chromaflash_lib.so|7e78214bfe228c084aa29f01785ec225dfc5ff34
+vendor/lib/libmmcamera_llvd.so|8363e2178de3580dc7d79a6efdce9f8eb4f487f2
+vendor/lib/libmmcamera_optizoom_lib.so|f560524664e29578cddd2a386f43a6bb63685180
+vendor/lib/libmmcamera_stillmore_lib.so|8b35a3e2694b7cb0dd6ba87d72364b0e4bb791d1
+vendor/lib/libmmcamera_trueportrait_lib.so|34a4cd3f0d28d3328dca29f8b6415724460fd997
+vendor/lib/liboptizoom.so|1e92993743636c045438f1f15c07c1e835d9ca46
+vendor/lib/libseemore.so|e5fa2e335cc8e1c9e173b2b9794f208143c2fe3b
+vendor/lib/libubifocus.so|833a305c780b2e7e338323c5ba27cb042f5cc3ed
+
 # Display (Firmware)
 vendor/firmware/leia_pfp_470.fw
 vendor/firmware/leia_pm4_470.fw
