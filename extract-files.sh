@@ -78,9 +78,6 @@ function blob_fixup() {
         vendor/lib/hw/vulkan.msm8998.so|vendor/lib64/hw/vulkan.msm8998.so)
             "${PATCHELF}" --set-soname "vulkan.msm8998.so" "${2}"
             ;;
-        vendor/lib/hw/sound_trigger.primary.msm8998.so|vendor/lib64/hw/sound_trigger.primary.msm8998.so)
-            "${PATCHELF}" --set-soname "sound_trigger.primary.msm8998.so" "${2}"
-            ;;
     esac
 }
 
