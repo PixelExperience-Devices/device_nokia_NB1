@@ -113,7 +113,6 @@ TARGET_NO_RECOVERY := true
 TARGET_BOARD_PLATFORM := msm8998
 
 # Power
-TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/AllHWList/tp_double_tap"
 
 # Properties
