@@ -38,7 +38,6 @@ on boot
     chown system system /proc/AllHWList/tp_alt_rst
     chown system system /proc/AllHWList/tp_alt_st_count
     chown system system /proc/AllHWList/tp_alt_st_enable
-    chown system system /proc/AllHWList/tp_double_tap
     chown system system /proc/AllHWList/tp_prox_status
     chown system system /sys/devices/virtual/input/siw_touch_input/lpwg_notify
     chown system system /sys/devices/virtual/input/siw_touch_input/glove_status
