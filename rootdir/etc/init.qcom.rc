@@ -952,6 +952,9 @@ service vendor.LKCore-rel /vendor/bin/LKCore
     user system
     group system log diag
 
+on boot && property:persist.sys.usb.config=*
+    setprop sys.usb.config ${persist.sys.usb.config}
+
 on charger
     setprop persist.sys.usb.config mass_storage
     start vendor.qcom-post-boot
