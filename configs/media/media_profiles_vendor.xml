@@ -445,9 +445,9 @@
             channels="2" />
     </EncoderProfile>
 
-        <ImageEncoding quality="100" />
         <ImageEncoding quality="95" />
-        <ImageEncoding quality="85" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
 
     </CamcorderProfiles>
@@ -469,9 +469,9 @@
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="42000000"
-             width="3840"
-             height="2160"
+             bitRate="20000000"
+             width="1920"
+             height="1080"
              frameRate="30" />
 
       <Audio codec="aac"
@@ -571,19 +571,6 @@
              channels="2" />
     </EncoderProfile>
 
-    <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-            bitRate="42000000"
-            width="3840"
-            height="2160"
-            frameRate="30" />
-
-      <Audio codec="aac"
-            bitRate="156000"
-            sampleRate="48000"
-            channels="2" />
-    </EncoderProfile>
-    
     <!-- TIMELAPSE profiles for front camera -->
     <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -601,9 +588,9 @@
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="42000000"
-             width="3840"
-             height="2160"
+             bitRate="20000000"
+             width="1920"
+             height="1080"
              frameRate="30" />
 
       <!-- audio setting is ignored -->
@@ -711,23 +698,9 @@
              channels="2" />
     </EncoderProfile>
 
-    
-    <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-            bitRate="42000000"
-            width="3840"
-            height="2160"
-            frameRate="30" />
-
-      <Audio codec="aac"
-            bitRate="156000"
-            sampleRate="48000"
-            channels="2" />
-    </EncoderProfile>
-    
-        <ImageEncoding quality="100" />
         <ImageEncoding quality="95" />
-        <ImageEncoding quality="85" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
 
     </CamcorderProfiles>
@@ -1085,9 +1058,9 @@
             channels="2" />
     </EncoderProfile>
 
-        <ImageEncoding quality="100" />
         <ImageEncoding quality="95" />
-        <ImageEncoding quality="85" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
 
     </CamcorderProfiles>
@@ -1445,13 +1418,13 @@
             channels="2" />
     </EncoderProfile>
 
-        <ImageEncoding quality="100" />
         <ImageEncoding quality="95" />
-        <ImageEncoding quality="85" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
 
     </CamcorderProfiles>
-    
+	
     <EncoderOutputFileFormat name="3gp" />
     <EncoderOutputFileFormat name="mp4" />
 

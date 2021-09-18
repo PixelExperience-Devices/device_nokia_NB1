@@ -150,6 +150,7 @@ persist.ims.enableDebugLogs=1
 vidc.enc.dcvs.extra-buff-count=2
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
