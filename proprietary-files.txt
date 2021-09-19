@@ -173,6 +173,8 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
 # Charger
+system/bin/charger
+system/lib64/libsuspend.so
 vendor/bin/hvdcp_opti
 
 # DPM
