@@ -2,3 +2,4 @@ dontaudit init { bt_firmware_file firmware_file }:filesystem getattr;
 
 # Audio
 allow init audio_device:chr_file r_file_perms;
+allow init proc_asound:file r_file_perms;
