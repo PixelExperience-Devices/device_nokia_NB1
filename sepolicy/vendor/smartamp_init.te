@@ -1,0 +1,9 @@
+type smartamp_init, domain;
+type smartamp_init_exec, exec_type, vendor_file_type, file_type;
+
+# Allow for transition from init domain to smartamp_init
+init_daemon_domain(smartamp_init)
+
+# Shell script needs to execute /vendor/bin/sh
+allow smartamp_init vendor_shell_exec:file rx_file_perms;
+allow smartamp_init vendor_toolbox_exec:file rx_file_perms;
