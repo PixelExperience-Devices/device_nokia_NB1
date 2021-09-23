@@ -1,0 +1,2 @@
+# /proc/bandinfo - Radio
+genfscon proc /bandinfo            u:object_r:proc_bandinfo:s0
