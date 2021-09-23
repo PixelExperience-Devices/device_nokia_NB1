@@ -1,1 +1,2 @@
-r_dir_file(qti_init_shell, vendor_data_file)
+allow qti_init_shell vendor_data_file:dir create_dir_perms;
+allow qti_init_shell vendor_data_file:file create_file_perms;
