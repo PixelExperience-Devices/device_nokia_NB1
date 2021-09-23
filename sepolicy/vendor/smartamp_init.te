@@ -9,4 +9,6 @@ allow smartamp_init vendor_shell_exec:file rx_file_perms;
 allow smartamp_init vendor_toolbox_exec:file rx_file_perms;
 
 # Tinymix execution
-allow smartamp_init system_file:file execute_no_trans;
+allow smartamp_init system_file:file rx_file_perms;
+allow smartamp_init proc_asound:dir search;
+allow smartamp_init proc_asound:file r_file_perms;
