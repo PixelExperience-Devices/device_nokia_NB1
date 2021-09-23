@@ -3,6 +3,7 @@ type gx_fpd_data_file, file_type, data_file_type, core_data_file_type;
 
 # Proc
 type proc_bandinfo, proc_type, fs_type;
+type proc_fih, fs_type, proc_type;
 
 # Sysfs
 type sysfs_iio, sysfs_type, fs_type;
