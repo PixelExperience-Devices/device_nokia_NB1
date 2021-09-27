@@ -1,14 +1,10 @@
 type smartamp_init, domain;
 type smartamp_init_exec, exec_type, vendor_file_type, file_type;
 
-# Allow for transition from init domain to smartamp_init
 init_daemon_domain(smartamp_init)
 
-# Shell script needs to execute /vendor/bin/sh
-allow smartamp_init vendor_shell_exec:file rx_file_perms;
-allow smartamp_init vendor_toolbox_exec:file rx_file_perms;
+allow smartamp_init audio_device:dir search;
+allow smartamp_init audio_device:chr_file rw_file_perms;
 
-# Tinymix execution
-allow smartamp_init system_file:file rx_file_perms;
-allow smartamp_init proc_asound:dir search;
-allow smartamp_init proc_asound:file r_file_perms;
+allow smartamp_init vendor_tinyalsa_exec:file execute_no_trans;
+allow smartamp_init vendor_toolbox_exec:file execute_no_trans;
