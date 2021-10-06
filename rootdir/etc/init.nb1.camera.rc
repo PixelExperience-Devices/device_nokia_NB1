@@ -66,14 +66,14 @@ on post-fs-data
     start rf_calbd
     start oisgyro_calbd
 
-service rf_calbd /system/bin/toybox dd if=/dev/block/bootdevice/by-name/deviceinfo of=/sys/kernel/range/cal_data ibs=16 obs=16 skip=32000 count=1
+service rf_calbd /vendor/bin/toybox_vendor dd if=/dev/block/bootdevice/by-name/deviceinfo of=/sys/kernel/range/cal_data ibs=16 obs=16 skip=32000 count=1
 	class main
 	user root
 	group system camera
 	oneshot
 	disabled
 
-service oisgyro_calbd /system/bin/toybox dd if=/dev/block/bootdevice/by-name/deviceinfo of=/sys/kernel/ois_control/gyro_cal ibs=16 obs=16 skip=2560 count=1
+service oisgyro_calbd /vendor/bin/toybox_vendor dd if=/dev/block/bootdevice/by-name/deviceinfo of=/sys/kernel/ois_control/gyro_cal ibs=16 obs=16 skip=2560 count=1
 	class main
 	user root
 	group system system
