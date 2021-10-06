@@ -9,5 +9,4 @@ genfscon proc /sensordata       u:object_r:proc_fih:s0
 genfscon proc /baseband         u:object_r:proc_fih:s0
 
 # Sysfs
-genfscon sysfs /sys/devices/soc/soc:qcom,ipa_fws@1e08000/subsys0/name                                                                       u:object_r:sysfs_ssr:s0
-genfscon sysfs /sys/devices/soc/17300000.qcom,lpass/subsys4/state                                                                           u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/17300000.qcom,lpass/subsys4/state       u:object_r:sysfs_ssr:s0
