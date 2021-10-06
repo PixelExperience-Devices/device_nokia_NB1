@@ -1,6 +1,6 @@
 
 ## Nokia 8 proprietary files
-## From Nokia/NB1_00WW_FIH/NB1:9/PPR1.180610.011/00WW_5_15K:user/release-keys unless pinned
+## From Nokia/NB1_00WW_FIH/NB1:9/PPR1.180610.011/00WW_5_16A:user/release-keys unless pinned
 
 # Audio (Hardware) - from A1N QKQ1.190828.002
 vendor/lib/hw/audio.primary.msm8998.so|11b783e02bd8dc27bacbcf0d3847810e54910ecd
