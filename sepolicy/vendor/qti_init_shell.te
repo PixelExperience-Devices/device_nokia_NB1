@@ -3,3 +3,6 @@ allow qti_init_shell vendor_data_file:file create_file_perms;
 
 allow qti_init_shell ctl_start_prop:property_service set;
 allow qti_init_shell ctl_stop_prop:property_service set;
+
+allow qti_init_shell proc_extra_free_kbytes:file { open write };
+allow qti_init_shell sysfs:file setattr;
