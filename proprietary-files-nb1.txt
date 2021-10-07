@@ -3,6 +3,7 @@
 ## From Nokia/NB1_00WW_FIH/NB1:9/PPR1.180610.011/00WW_5_16A:user/release-keys unless pinned
 
 # Audio (Hardware) - from A1N QKQ1.190828.002
+vendor/etc/audio/silence_48k.wav|26df84a9ba771f568ae58f69a248cea4ce8b6209
 vendor/lib/hw/audio.primary.msm8998.so|11b783e02bd8dc27bacbcf0d3847810e54910ecd
 vendor/lib/libaudioalsa.so|272cd6a93bca7edbe3cf4323ca1612737f4f9cde
 vendor/lib/liba2dpoffload.so|a56079bb7b62600ef7ca661c5f05c8294ccd9d54
