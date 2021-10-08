@@ -143,6 +143,12 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
+    android.hardware.drm@1.2 \
+    android.hardware.drm@1.2.vendor \
+    android.hardware.drm@1.3 \
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.4 \
+    android.hardware.drm@1.4.vendor \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.1.vendor \
@@ -151,6 +157,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor \
+    android.hardware.biometrics.fingerprint@2.2.vendor \
     android.hardware.biometrics.fingerprint@2.1-service
 
 # FM
@@ -502,13 +509,24 @@ PRODUCT_PACKAGES += \
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0.vendor \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0 \
+    android.hardware.bluetooth@1.0.vendor
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor
 
 # Inherit vendor
 $(call inherit-product, vendor/nokia/NB1/NB1-vendor.mk)
