@@ -54,6 +54,7 @@ ro.carrier=unknown
 ro.telephony.call_ring.multiple=false
 ro.telephony.use_old_mnc_mcc_format=true
 telephony.lteOnCdmaDevice=1
+persist.sys.fflag.override.settings_provider_model=false
 
 # SurefaceFlinger
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
