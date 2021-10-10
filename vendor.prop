@@ -89,8 +89,7 @@ persist.vendor.camera.gyro.disable=0
 persist.vendor.camera.tof.direct=1
 ro.camera.record.anim.delay=200
 ro.camera.switch.anim.delay=300
-vendor.camera.aux.packagelist=com.evenwell.camera2,com.evenwell.fqc,com.tools.alt,com.hmdglobal.camera2
-vendor.camera.aux.packagelist=org.codeaurora.snapcam
+vendor.camera.aux.packagelist=com.evenwell.camera2,com.tools.alt,com.hmdglobal.camera2,org.codeaurora.snapcam
 vendor.voice.path.for.pcm.voip=false
 
 # CNE
