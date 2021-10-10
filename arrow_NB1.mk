@@ -9,8 +9,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ArrowOS stuff
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Inherit from NB1 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -23,7 +23,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
 
-PRODUCT_NAME := lineage_NB1
+PRODUCT_NAME := arrow_NB1
 PRODUCT_DEVICE := NB1
 PRODUCT_MANUFACTURER := HMD Global
 PRODUCT_BRAND := Nokia
