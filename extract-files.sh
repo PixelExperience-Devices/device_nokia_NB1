@@ -74,17 +74,6 @@ function blob_fixup() {
         vendor/lib/hw/vulkan.msm8998.so|vendor/lib64/hw/vulkan.msm8998.so)
             "${PATCHELF}" --set-soname "vulkan.msm8998.so" "${2}"
             ;;
-        # Patch WFD blobs
-        lib/libwfdaudioclient.so)
-            "${PATCHELF}" --set-soname "libwfdaudioclient.so" "${2}"
-            ;;
-        lib/libwfdmediautils.so)
-            "${PATCHELF}" --set-soname "libwfdmediautils.so" "${2}"
-            ;;
-        lib/libwfdmmsink.so)
-            "${PATCHELF}" --add-needed "libwfdaudioclient.so" "${2}"
-            "${PATCHELF}" --add-needed "libwfdmediautils.so" "${2}"
-            ;;
         # Health
         vendor/bin/hw/android.hardware.health@2.0-service)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
