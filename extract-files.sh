@@ -85,6 +85,10 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "libwfdaudioclient.so" "${2}"
             "${PATCHELF}" --add-needed "libwfdmediautils.so" "${2}"
             ;;
+        # Health
+        vendor/bin/hw/android.hardware.health@2.0-service)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            ;;
     esac
 }
 
