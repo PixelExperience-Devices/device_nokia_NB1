@@ -215,7 +215,8 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims_ext_common.xml
+    ims_ext_common.xml \
+    libshim-imsvt
 
 # IPACM
 PRODUCT_PACKAGES += \
