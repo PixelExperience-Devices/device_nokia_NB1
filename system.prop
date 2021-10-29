@@ -38,6 +38,9 @@ ro.sf.blurs_are_expensive=1
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 
+# OEM Unlock
+ro.oem_unlock_supported=1
+
 # Radio
 DEVICE_PROVISIONED=1
 config.disable_networktime=false
