@@ -34,6 +34,9 @@ cc_library_shared {
     srcs: [
         "DisplayEventReceiver.cpp",
     ],
+    include_dirs: [
+        "frameworks/native/include",
+    ],
     shared_libs: [
         "libgui_vendor"
     ]
