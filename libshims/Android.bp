@@ -42,16 +42,6 @@ cc_library_shared {
     ]
 }
 
-// DPM
-cc_library {
-    name: "libshim_cutils",
-    srcs: [
-        "strdup16to8.cpp",
-        "strdup8to16.cpp",
-    ],
-    shared_libs: ["libcutils"],
-}
-
 // lib-imsvt
 cc_library_shared {
     name: "libshim-imsvt",

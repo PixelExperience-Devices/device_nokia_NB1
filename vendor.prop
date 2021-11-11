@@ -74,6 +74,8 @@ vendor.audio.feature.snd_mon.enable=true
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac
+persist.vendor.qcom.bluetooth.scram.enabled=false
+persist.vendor.qcom.bluetooth.soc=cheroke
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.qcom.bluetooth.soc=cherokee
 ro.vendor.bluetooth.wipower=false
@@ -105,6 +107,9 @@ vendor.gralloc.enable_fb_ubwc=1
 # Dalvik dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
+# DPM
+persist.vendor.dpmhalservice.enable=1
+
 # DRM
 drm.service.enabled=true
 
@@ -119,8 +124,8 @@ sys.gxfp.lv=1
 vendor.hw.fm.init=0
 
 # Graphics
-dev.pm.dyn_samplingrate=1
-persist.demo.hdmirotationlock=false
+ro.hardware.vulkan=adreno
+ro.hardware.egl=adreno
 ro.opengles.version=196610
 
 # HWUI
@@ -157,6 +162,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 persist.vendor.radio.add_power_save=1
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.enableadvancedscan=0
 persist.vendor.radio.lte_vrte_ltd=1
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1

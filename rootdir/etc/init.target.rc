@@ -148,6 +148,7 @@ on property:sys.shutdown.requested=*
 
 on charger
     start vendor.hvdcp_opti
+    setprop vendor.usb.controller a800000.dwc3
     setprop sys.usb.configfs 1
 
 service vendor.qseecomd /vendor/bin/qseecomd
@@ -159,20 +160,6 @@ service spdaemon /vendor/bin/spdaemon
    class core
    user system
    group system
-
-service thermal-engine /system/vendor/bin/thermal-engine
-   class main
-   user root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
-   socket thermal-send-rule stream 0660 system system
-   group root
-
-service vendor.adsprpcd /system/vendor/bin/adsprpcd
-   class main
-   user media
-   group media
 
 service hbtp /system/vendor/bin/hbtp_daemon
     class main
@@ -239,10 +226,3 @@ service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
     class main
     user root
     group system wakelock
-
-service qvrd /system/bin/qvrservice
-    class late_start
-    user system
-    group system camera graphics
-    socket qvrservice stream 0666 system system
-    capabilities SYS_NICE

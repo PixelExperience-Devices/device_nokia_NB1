@@ -58,25 +58,17 @@ function blob_fixup() {
         vendor/lib64/hw/gxfingerprint.default.so)
             sed -i -e 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             ;;
-        system_ext/etc/permissions/qti_fingerprint_interface.xml)
-            sed -i -e 's|/system/framework|/system/system_ext/framework|g' "${2}"
-            ;;
         # Use vendor version of libgui
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_gui.so" "${2}"
             ;;
-        # Shim libdpmframework
-        product/lib64/libdpmframework.so)
-            "${PATCHELF}" --add-needed "libshim_cutils.so" "${2}"
-            ;;
         # Convert sdm660 to msm8998
-        vendor/lib/hw/vulkan.msm8998.so|vendor/lib64/hw/vulkan.msm8998.so)
-            "${PATCHELF}" --set-soname "vulkan.msm8998.so" "${2}"
+        vendor/lib/hw/sound_trigger.primary.msm8998.so|vendor/lib64/hw/sound_trigger.primary.msm8998.so)
+            "${PATCHELF}" --set-soname "sound_trigger.primary.msm8998.so" "${2}"
             ;;
-        # Health
-        vendor/bin/hw/android.hardware.health@2.0-service)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+        product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
+            sed -i 's/version="2.0"/version="1.0"/g' "${2}"
             ;;
     esac
 }
