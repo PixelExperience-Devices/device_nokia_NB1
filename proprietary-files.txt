@@ -655,7 +655,6 @@ vendor/bin/pd-mapper
 vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
-vendor/lib/libminkdescriptor.so
 vendor/lib/libminksocket.so
 vendor/lib/libqcc_file_agent.so
 vendor/lib/libqcci_legacy.so
@@ -674,7 +673,6 @@ vendor/lib/libqmi_legacy.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
-vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket.so
 vendor/lib64/libqcc_file_agent.so
 vendor/lib64/libqcci_legacy.so
