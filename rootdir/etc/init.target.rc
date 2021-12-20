@@ -226,3 +226,8 @@ service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
     class main
     user root
     group system wakelock
+
+service vendor.adsprpcd /vendor/bin/adsprpcd
+   class main
+   user system
+   group media
