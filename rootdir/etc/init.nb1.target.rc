@@ -77,9 +77,6 @@ service amp-init-sh /vendor/bin/init.nb1.smartamp_init.sh
 on property:sys.boot_completed=1
     restorecon_recursive /data/system/fingerprint/
 
-on property:vold.sd=1
-    write /sys/devices/virtual/bdi/179:0/read_ahead_kb 1024
-
 on property:vendor.wifi.mtu=true
    write /sys/class/net/wlan0/mtu 1440
 
