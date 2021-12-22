@@ -367,14 +367,6 @@ etc/firmware/goodixfplv.b06:vendor/firmware/goodixfplv.b06
 etc/firmware/goodixfplv.b07:vendor/firmware/goodixfplv.b07
 etc/firmware/goodixfplv.mdt:vendor/firmware/goodixfplv.mdt
 
-# Gatekeeper
-vendor/lib/hw/gatekeeper.msm8998.so
-vendor/lib64/hw/gatekeeper.msm8998.so
-
-# Keystore
-vendor/lib/hw/keystore.msm8998.so
-vendor/lib64/hw/keystore.msm8998.so
-
 # Graphics (Firmware)
 vendor/firmware/a225p5_pm4.fw
 vendor/firmware/a225_pfp.fw
