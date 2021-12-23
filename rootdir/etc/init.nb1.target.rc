@@ -1,10 +1,6 @@
 import /vendor/etc/init/hw/init.nb1.camera.rc
 import /vendor/etc/init/hw/init.nb1.poweroff_charging.rc
 
-on init
-    setprop persist.fp.navigation 1
-    setprop persist.close.keymaster 1
-
 on early-boot
     rm /persist/bluetooth/.bt_nv.bin
 

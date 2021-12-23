@@ -116,6 +116,8 @@ drm.service.enabled=true
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Fingerprint
+persist.fp.navigation=1
+persist.close.keymaster=1
 qemu.hw.mainkeys=1
 sys.gxfp.lv=1
 
