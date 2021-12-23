@@ -5,7 +5,8 @@ init_daemon_domain(vendor_mutualex)
 allow vendor_mutualex vendor_mutualex:{
     qipcrtr_socket
     netlink_generic_socket
-}create_socket_perms_no_ioctl;
+    socket
+} create_socket_perms_no_ioctl;
 
 hal_client_domain(vendor_mutualex,hal_wifi_hostapd)
 hal_client_domain(vendor_mutualex,hal_wifi_supplicant)
