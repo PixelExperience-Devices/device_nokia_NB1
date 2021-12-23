@@ -33,5 +33,8 @@ allow gx_fpd self:{ netlink_socket netlink_generic_socket } create_socket_perms_
 # Allow reading firmware file
 r_dir_file(gx_fpd, firmware_file)
 
+# Allow read to vendor props
+get_prop(gx_fpd, vendor_default_prop)
+
 # Ignore all logging requests
 dontaudit gx_fpd storage_file:dir search;
