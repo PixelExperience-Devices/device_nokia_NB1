@@ -6,6 +6,3 @@ allow init proc_asound:file r_file_perms;
 
 # OIS
 allow init sysfs_ois:file w_file_perms;
-
-# Toybox
-allow init vendor_toolbox_exec:file execute_no_trans;

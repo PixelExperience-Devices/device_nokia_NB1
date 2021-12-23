@@ -2,7 +2,7 @@
 type public_adsprpcd_file, file_type;
 
 # Fingerprint
-type gx_fpd_data_file, file_type, data_file_type, core_data_file_type;
+type gx_fpd_data_file, file_type, data_file_type;
 
 # Proc
 type proc_bandinfo, proc_type, fs_type;
