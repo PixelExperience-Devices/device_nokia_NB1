@@ -550,20 +550,18 @@ vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
 
 # Listen
-vendor/lib/hw/sound_trigger.primary.sdm660.so:vendor/lib/hw/sound_trigger.primary.msm8998.so
-vendor/lib/libadpcmdec.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
-vendor/lib/liblistensoundmodel2.so
-vendor/lib/libsmwrapper.so
-vendor/lib64/hw/sound_trigger.primary.sdm660.so:vendor/lib64/hw/sound_trigger.primary.msm8998.so
-vendor/lib64/libgcs-calwrapper.so
-vendor/lib64/libgcs-ipc.so
-vendor/lib64/libgcs-osal.so
-vendor/lib64/libgcs.so
-vendor/lib64/liblistensoundmodel2.so
+vendor/lib/hw/sound_trigger.primary.msm8998.so|fe269637e9e0e490ffd790a7e79634fe508455fd
+vendor/lib/libadpcmdec.so|6e9be864a1380e099a2d68237e13a724f3143314
+vendor/lib/libgcs-calwrapper.so|e98d447335433072418a7352560ee06c53aee92e
+vendor/lib/libgcs-ipc.so|9b1f52e90e580185400b11e55a01fdb6ca341046
+vendor/lib/libgcs-osal.so|dfae7d1bb15b7bd19fef7427f0a6f6df28d5d30a
+vendor/lib/libgcs.so|7c2eaf7bf9556b967d08c2b36c470b566e16f017
+vendor/lib/libsmwrapper.so|c12725b40bc853cccbf1f489481892aa5bfb629c
+vendor/lib64/hw/sound_trigger.primary.msm8998.so|409c5316dd28e5cbf62954ab6ee53fe649b84fca
+vendor/lib64/libgcs-calwrapper.so|93089874e04abfcbf0a0ddc538e9e02d7beb2f79
+vendor/lib64/libgcs-ipc.so|5652c35f32f1a17c4b34abb68b4545ffed58a44d
+vendor/lib64/libgcs-osal.so|5eca0a8d8ea32505d5b8d69b3e13bf640b34976a
+vendor/lib64/libgcs.so|d125c49f6af5aa939c0bf791046336b24795556e
 
 # Media
 vendor/lib/libAlacSwDec.so
