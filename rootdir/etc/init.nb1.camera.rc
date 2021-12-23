@@ -25,24 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on init
-	setprop persist.camera.FIH_FTM 0
-	setprop persist.vendor.camera.HAL3.enabled 1
-	setprop persist.vendor.camera.ois.disable 0
-	setprop persist.vendor.ois.disable 0
-	setprop persist.camera.hdr_level 1.5
-	
-	setprop persist.camera.ffcolor ffdfbe
-	setprop camera.hdr.tone.main 25
-	setprop camera.hdr.bright.main 0
-	setprop camera.hdr.sat.main 0
-	setprop camera.hdr.perf.main 2
-	setprop camera.hdr.tone.front 25
-	setprop camera.hdr.bright.front 0
-	setprop camera.hdr.sat.front 0
-	setprop camera.hdr.perf.front 2
-	setprop camera.hal1.packagelist com.dw.btime
-
 on boot
     chown system camera /sys/kernel/range/enable_ps_sensor
     chmod 0660 /sys/kernel/range/enable_ps_sensor
@@ -79,7 +61,3 @@ service oisgyro_calbd /vendor/bin/toybox_vendor dd if=/dev/block/bootdevice/by-n
 	group system system
 	oneshot
 	disabled
-
-on property:ro.product.nickname=*
-	setprop persist.vendor.sys.exif.model ${ro.product.nickname}
-	setprop persist.sys.exif.model ${ro.product.nickname}
