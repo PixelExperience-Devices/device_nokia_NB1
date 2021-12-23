@@ -428,7 +428,7 @@ vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
-# Gatekeeper
+# Gatekeeper - from A1N QKQ1.190828.002
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|a189a50515831e6ac9a7e88a165ac979ae6ac077
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|159be7f9cd1efd5da54f7d4ed660321bd1895d1b
@@ -532,7 +532,7 @@ vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
 # IRQ Balance
 vendor/bin/msm_irqbalance
 
-# Keymaster
+# Keymaster - from A1N QKQ1.190828.002
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|22838e26f4a645a351bec32405ccf54b2271e13d
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc|573b7392c8997008204081165cfe81a11080745d
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so|d35a5b70f5325aaaaf5288c08ff1e0b6fd2b34e6
@@ -549,7 +549,7 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
 
-# Listen
+# Listen - from A1N QKQ1.190828.002
 vendor/lib/hw/sound_trigger.primary.msm8998.so|fe269637e9e0e490ffd790a7e79634fe508455fd
 vendor/lib/libadpcmdec.so|6e9be864a1380e099a2d68237e13a724f3143314
 vendor/lib/libgcs-calwrapper.so|e98d447335433072418a7352560ee06c53aee92e
