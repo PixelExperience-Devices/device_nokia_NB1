@@ -3,8 +3,11 @@ camera.                                 u:object_r:vendor_camera_prop:s0
 persist.camera.fih_dbg.logs             u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
-sys.gxfp.lv                             u:object_r:vendor_default_prop:s0
+sys.gxfp.                               u:object_r:vendor_default_prop:s0
 ro.template.count                       u:object_r:vendor_default_prop:s0
+sys.fih.fingerprint                     u:object_r:vendor_default_prop:s0
+sys.fp.vid                              u:object_r:vendor_default_prop:s0
+persist.enable.esd                      u:object_r:vendor_default_prop:s0
 
 # Sensors
 persist.pressure.diff                   u:object_r:vendor_default_prop:s0
