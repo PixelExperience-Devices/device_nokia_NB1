@@ -126,6 +126,9 @@ TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
+# Radio
+ENABLE_VENDOR_RIL_SERVICE := true
+
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true

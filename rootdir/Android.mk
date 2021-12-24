@@ -1,14 +1,6 @@
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.class_main.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := EXECUTABLES
-LOCAL_SRC_FILES    := bin/init.class_main.sh
-LOCAL_VENDOR_MODULE    := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.nb1.smartamp_init.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := EXECUTABLES

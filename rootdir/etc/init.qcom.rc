@@ -221,6 +221,10 @@ on boot
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
 
+    # Start qcrild
+    start vendor.qcrild
+    start vendor.qcrild2
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
