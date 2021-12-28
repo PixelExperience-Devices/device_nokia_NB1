@@ -367,13 +367,13 @@ etc/firmware/goodixfplv.b06:vendor/firmware/goodixfplv.b06
 etc/firmware/goodixfplv.b07:vendor/firmware/goodixfplv.b07
 etc/firmware/goodixfplv.mdt:vendor/firmware/goodixfplv.mdt
 
-# Gatekeeper
-vendor/lib/hw/gatekeeper.msm8998.so
-vendor/lib64/hw/gatekeeper.msm8998.so
+# Gatekeeper - from A1N QKQ1.190828.002
+vendor/lib/hw/gatekeeper.msm8998.so|06260864e6e54b4d7eff8d80e49c3b229388746a
+vendor/lib64/hw/gatekeeper.msm8998.so|edfaffc6e289a998b955affd1d469f8a6c7b4a13
 
-# Keystore
-vendor/lib/hw/keystore.msm8998.so
-vendor/lib64/hw/keystore.msm8998.so
+# Keystore - from A1N QKQ1.190828.002
+vendor/lib/hw/keystore.msm8998.so|7ce29b1848f7ff4875918f5bdc996910a8046c9d
+vendor/lib64/hw/keystore.msm8998.so|68be3e488242336bc3c8a85db4a0393a581e8846
 
 # Graphics (Firmware)
 vendor/firmware/a225p5_pm4.fw
