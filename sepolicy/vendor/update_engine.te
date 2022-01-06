@@ -1,0 +1,5 @@
+allow update_engine custom_ab_block_device:blk_file rw_file_perms;
+allow update_engine modem_block_device:blk_file rw_file_perms;
+
+allow update_engine bt_firmware_file:filesystem getattr;
+allow update_engine firmware_file:filesystem getattr;
