@@ -117,6 +117,12 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5 \
     vendor.qti.hardware.camera.device@1.0
 
+PRODUCT_PACKAGES += \
+    camera.msm8998 \
+    libmm-qcamera \
+    mm-qcamera-app \
+    libhal_dbg
+
 # Charger
 PRODUCT_PACKAGES += \
     libsuspend
