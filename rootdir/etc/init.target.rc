@@ -148,8 +148,9 @@ on property:sys.shutdown.requested=*
 
 on charger
     start vendor.hvdcp_opti
-    setprop vendor.usb.controller a800000.dwc3
+    setprop persist.sys.usb.config mass_storage
     setprop sys.usb.configfs 1
+    start vendor.power_off_alarm
 
 service vendor.qseecomd /vendor/bin/qseecomd
    class core

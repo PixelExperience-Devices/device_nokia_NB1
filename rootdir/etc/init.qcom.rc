@@ -863,10 +863,6 @@ service vendor.LKCore-rel /vendor/bin/LKCore
 on boot && property:persist.sys.usb.config=*
     setprop sys.usb.config ${persist.sys.usb.config}
 
-on charger
-    setprop persist.sys.usb.config mass_storage
-    start vendor.qcom-post-boot
-
 #add poweroffhandler
 service poweroffhandler /system/vendor/bin/poweroffhandler
     class core
