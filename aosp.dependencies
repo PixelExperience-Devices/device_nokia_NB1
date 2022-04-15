@@ -1,6 +1,19 @@
 [
   {
-    "repository": "android_packages_apps_GcamGOPrebuilt",
-    "target_path": "packages/apps/GcamGOPrebuilt"
+    "repository": "lakgarg/packages_apps_GoogleCameraGo",
+    "target_path": "packages/apps/GoogleCameraGo",
+    "branch": "master",
+    "remote": "gitlab"
+  },
+  {
+    "repository": "kernel_nokia_msm8998",
+    "target_path": "kernel/nokia/msm8998",
+    "branch": "twelve"
+  },
+  {
+    "repository": "vendor_nokia_NB1",
+    "target_path": "vendor/nokia/NB1",
+    "branch": "twelve",
+    "remote": "pixel-devices-blobs"
   }
 ]
