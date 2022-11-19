@@ -109,6 +109,9 @@ TARGET_KERNEL_VERSION := 4.4
 TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_OPTIONAL_LD := true
 
+# LZ4 ramdisk
+BOARD_RAMDISK_USE_LZ4 := false
+
 # Kernel additional flags
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
