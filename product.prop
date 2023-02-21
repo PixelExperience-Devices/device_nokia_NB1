@@ -22,6 +22,9 @@ bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.ccp.server.enabled?=true
 bluetooth.profile.vcp.controller.enabled?=true
 
+# Enhanced sco connection
+bluetooth.sco.disable_enhanced_connection=true
+
 # Radio
 persist.vendor.qti.telephony.vt_cam_interface=2
 
