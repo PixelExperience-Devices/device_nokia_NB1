@@ -8,7 +8,7 @@
   {
     "repository": "kernel_nokia_msm8998",
     "target_path": "kernel/nokia/msm8998",
-    "branch": "twelve"
+    "branch": "thirteen"
   },
   {
     "repository": "vendor_nokia_NB1",
